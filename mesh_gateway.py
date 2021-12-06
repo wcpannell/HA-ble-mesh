@@ -82,7 +82,7 @@ class Interface:
             self.write_header()
 
         # Initialize Serial Port
-        if port is not None:
+        if port is None:
             ports = list_ports.comports()
             for a_port in ports:
                 if a_port.product == "Mesh Sensor Gateway":

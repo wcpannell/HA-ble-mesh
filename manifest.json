@@ -1,6 +1,7 @@
 {
   "domain": "ble_mesh",
   "name": "BLE Mesh Environmental Sensing",
+  "version": "1.0.1",
   "config_flow": true,
   "documentation": "https://www.home-assistant.io/integrations/ble_mesh",
   "requirements": ["pyserial==3.5"],
