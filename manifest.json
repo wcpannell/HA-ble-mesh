@@ -1,0 +1,18 @@
+{
+  "domain": "ble_mesh",
+  "name": "BLE Mesh Environmental Sensing",
+  "config_flow": true,
+  "documentation": "https://www.home-assistant.io/integrations/ble_mesh",
+  "requirements": ["pyserial==3.5"],
+  "ssdp": [],
+  "zeroconf": [],
+  "homekit": {},
+  "dependencies": ["usb"],
+  "codeowners": [
+    "@wcpannell"
+  ],
+  "iot_class": "local_polling",
+  "usb": [
+    {"vid":"2FE3","pid":"0100","description":"Mesh Sensor Gateway"}
+  ]
+}
