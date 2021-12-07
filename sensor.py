@@ -15,6 +15,7 @@ from homeassistant.components.sensor import (
     DOMAIN as SENSOR_DOMAIN,
     SensorEntity,
     SensorEntityDescription,
+    STATE_CLASS_MEASUREMENT,
 )
 from homeassistant.const import (
     DEVICE_CLASS_TEMPERATURE,
@@ -60,6 +61,7 @@ class MeshSensorNode(CoordinatorEntity, SensorEntity):
         super().__init__(coordinator)
         self.idx = idx
         self._type = sensor_type
+        self._attr_state_class = STATE_CLASS_MEASUREMENT
         if self._type == MeshSensorTypes.Temperature:
             self._attr_device_class = DEVICE_CLASS_TEMPERATURE
             self._attr_native_unit_of_measurement = TEMP_CELSIUS
